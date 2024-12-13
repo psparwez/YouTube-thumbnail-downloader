@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Thumbnail Downloader",
+    "description": "Download YouTube Video Thumbnails and Preview",
+    "version": "0.1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "YouTube Thumbnail Downloader",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "./assets/youtube-icon.png",
+        "48": "./assets/youtube-icon.png",
+        "128": "./assets/youtube-icon.png"
+    },
+    "host_permissions": [
+        "http://*.youtube.com/*",
+        "https://*.youtube.com/*"
+    ]
+}
