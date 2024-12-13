@@ -9,3 +9,112 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  width: 400px;
+  padding: 2rem;
+  background-color: #191828;
+  background-color: var(--body-bg-color);
+}
+.logo {
+  display: block;
+  text-align: center;
+  height: 85px;
+  width: 85px;
+  aspect-ratio: 1/1;
+  background: #ff3f3f2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 1.75rem;
+  border: 1px solid #ff3f3f2c;
+
+  & > img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+label {
+  color: #ffdcdc;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-box {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  & > input {
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    background: #ff3f3f14;
+    color: #ffe8e8;
+    transition: 0.2s;
+    box-shadow: none;
+
+    &::placeholder {
+      color: #ffc3c344;
+    }
+    &:focus {
+      box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.09),
+        0 0 20px rgba(0, 0, 0, 0.1),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.142);
+    }
+  }
+}
+
+.thumbnail-container {
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 164, 164, 0.264);
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#thumbnail-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  /* opacity: 0.1; */
+  -webkit-user-drag: none;
+  user-select: none;
+  transition: 0.3s;
+}
+
+#download-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background: linear-gradient(to top left, #982525c4, #400a0a);
+  border: none;
+  height: 45px;
+  border-radius: 0.4rem;
+  color: #d4c9fe;
+  color: #ffd6d6;
+  font-size: 1rem;
+  user-select: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.6s ease-in-out;
+
+  &:active {
+    background: linear-gradient(to top left, #982525e0, #400a0a);
+    transform: translateY(1px) scale(0.95);
+  }
+}
