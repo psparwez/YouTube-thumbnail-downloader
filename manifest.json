@@ -7,7 +7,8 @@
         "activeTab",
         "storage",
         "downloads",
-        "scripting"
+        "scripting",
+        "tabs"
     ],
     "background": {
         "service_worker": "background.js"
@@ -21,6 +22,27 @@
         "48": "./assets/youtube-icon.png",
         "128": "./assets/youtube-icon.png"
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "popup.html"
+            ],
+            "matches": [
+                "https://www.youtube.com/*"
+            ]
+        }
+    ],
     "host_permissions": [
         "http://*.youtube.com/*",
         "https://*.youtube.com/*"
